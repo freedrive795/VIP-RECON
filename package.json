@@ -1,0 +1,35 @@
+{
+  "name": "vip-recon",
+  "version": "1.0.0",
+  "description": "Yara POS Reconciliation",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.0.0"
+  },
+  "build": {
+    "appId": "com.yara.viprecon",
+    "productName": "VIP Recon",
+    "files": [
+      "index.html",
+      "main.js",
+      "icons/**"
+    ],
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  }
+}
